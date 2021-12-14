@@ -4,12 +4,51 @@
       v-show="true"
       v-on:event-child="getTreeData"
       :myData="myData"
-      :showbyChecked="true"
-      :disablingSaveBtn="true"
+      :showbByChecked="false"
+      :autoDisablingSaveBtn="true"
       :allCheckedOnStart="true"
     />
     <div class="col-lg-12 pt-3 text-center">
-      <code>{{ selectedTreeValues }}</code>
+      <code>&nbsp;{{ selectedTreeValues }}</code>
+    </div>
+    <div class="col-md-6 offset-md-3 mt-5">
+      <h4>Eigenschaften</h4>
+      <table class="table table-sm table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Eigenschaft</th>
+            <th>Typ</th>
+            <th>Standard</th>
+            <th>Beschreibung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>showbyChecked</code></td>
+            <td><code>Boolean</code></td>
+            <td><code>false</code></td>
+            <td>
+              Öffnet den Zweig beim anklicken der Checkbox, wenn die Checkbox
+              ist "checked"
+            </td>
+          </tr>
+          <tr>
+            <td><code>autoDisablingSaveBtn</code></td>
+            <td><code>Boolean</code></td>
+            <td><code>true</code></td>
+            <td>
+              Der Speicher-Button ist nur sichtbart, wenn eine Checkbox
+              ausgewält wurde oder er ist immer sichtbar.
+            </td>
+          </tr>
+          <tr>
+            <td><code>allCheckedOnStart</code></td>
+            <td><code>Boolean</code></td>
+            <td><code>false</code></td>
+            <td>Alle Checkbox sind "checked"</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -24,7 +63,6 @@ export default {
   },
   data() {
     return {
-      showbyChecked: false,
       selectedTreeValues: null,
       myData: [
         {

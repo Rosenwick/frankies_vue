@@ -4,7 +4,7 @@
     <input id="hf_msg" type="hidden" runat="server" />
     <button
       v-on:click="emit"
-      :disabled="enabledSaveBtn"
+      :disabled="disabledSaveBtn"
       class="btn btn-primary"
     >
       Speichern
@@ -74,11 +74,11 @@ export default {
     myData: {
       type: Array,
     },
-    showbyChecked: {
+    showByChecked: {
       type: Boolean,
       default: false,
     },
-    disablingSaveBtn: {
+    autoDisablingSaveBtn: {
       typ: Boolean,
       default: true,
     },
@@ -96,8 +96,8 @@ export default {
     };
   },
   computed: {
-    enabledSaveBtn() {
-      if (this.disablingSaveBtn === true) {
+    disabledSaveBtn() {
+      if (this.autoDisablingSaveBtn === true) {
         if (this.selectedValues.length > 0) {
           return false;
         } else {
