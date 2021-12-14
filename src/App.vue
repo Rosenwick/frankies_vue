@@ -42,7 +42,7 @@
         >
           <div class="container-fluid">
             <button
-              class="btn btn-primary"
+              class="btn btn-primary d-none"
               id="sidebarToggle"
               @click="[(isOpen = !isOpen)]"
             >
@@ -99,6 +99,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/scss/style.scss";
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -106,17 +108,8 @@ export default {
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.navbar {
+  height: 58px;
 }
 
 .sidebar-heading {
