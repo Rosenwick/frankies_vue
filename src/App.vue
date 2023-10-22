@@ -10,26 +10,17 @@
         <div class="list-group list-group-flush">
           <router-link
             to="/"
-            class="
-              list-group-item list-group-item-action list-group-item-light
-              p-3
-            "
+            class="list-group-item list-group-item-action list-group-item-light p-3"
             >Home</router-link
           >
           <router-link
             to="/treeview"
-            class="
-              list-group-item list-group-item-action list-group-item-light
-              p-3
-            "
+            class="list-group-item list-group-item-action list-group-item-light p-3"
             >TreeView</router-link
           >
           <router-link
             to="/ToggleData"
-            class="
-              list-group-item list-group-item-action list-group-item-light
-              p-3
-            "
+            class="list-group-item list-group-item-action list-group-item-light p-3"
             >Data Toggle</router-link
           >
         </div>

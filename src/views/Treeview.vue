@@ -8,6 +8,7 @@
       :autoDisablingSaveBtn="true"
       :allCheckedOnStart="true"
     />
+    <fraenkies-treeview2 :myData="myData"> </fraenkies-treeview2>
     <div class="col-lg-12 pt-3 text-center">
       <code>&nbsp;{{ selectedTreeValues }}</code>
     </div>
@@ -56,10 +57,13 @@
 <script>
 import FraenkiesTreeview from "@/components/FrankieTreeview.vue";
 
+import FraenkiesTreeview2 from "@/components/Treeview/Treeview2.vue";
+
 export default {
   name: "Treeview",
   components: {
     FraenkiesTreeview,
+    FraenkiesTreeview2,
   },
   data() {
     return {
@@ -68,7 +72,16 @@ export default {
         {
           name: "Type A",
           children: [
-            { name: "A1" },
+            {
+              name: "A1",
+              children: [
+                { name: "Sub A1" },
+                { name: "Sub A2" },
+                { name: "Sub A3" },
+                { name: "Sub A4" },
+                { name: "Sub A5" },
+              ],
+            },
             { name: "A2" },
             { name: "A3" },
             { name: "A4" },
